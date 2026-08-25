@@ -197,13 +197,12 @@
       background-color: #faf9f5;
     }
 
-    /* CTA Section */
+    /* CTA / Form Section */
     .cta-box {
       background-color: #faf9f5;
       border: 1.5px solid var(--border);
       padding: 28px 24px;
       margin: 20px 0 10px;
-      text-align: center;
     }
 
     .cta-box h3 {
@@ -213,13 +212,67 @@
       color: var(--text);
     }
 
-    .cta-box p {
+    .cta-box p.cta-intro {
       font-size: 1rem;
       color: var(--text-muted);
-      margin-bottom: 22px;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-bottom: 20px;
+    }
+
+    .inquiry-form {
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-family: inherit;
+      font-size: 0.95rem;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text);
+      border-radius: 2px;
+      transition: border-color 0.15s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.2);
+    }
+
+    .hidden-field {
+      display: none;
+    }
+
+    .form-actions {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
     }
 
     .cta-button {
@@ -227,12 +280,12 @@
       background-color: var(--accent);
       color: #ffffff;
       font-family: ui-monospace, "Cascadia Code", Menlo, monospace;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 14px 28px;
+      padding: 12px 24px;
       border: 1.5px solid var(--border);
       border-radius: 2px;
       box-shadow: 3px 3px 0px var(--border);
@@ -252,7 +305,6 @@
     }
 
     .cta-subtext {
-      margin-top: 14px;
       font-family: ui-monospace, Menlo, monospace;
       font-size: 0.8rem;
       color: var(--text-muted);
@@ -319,6 +371,10 @@
       .hero-tagline {
         font-size: 1.15rem;
       }
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
       .top-bar {
         padding: 10px 18px;
       }
@@ -341,7 +397,7 @@
         <!-- Hero Section -->
         <section class="hero">
           <div class="hero-brand">
-            <img src="https://raw.githubusercontent.com/youdontknowkev/kmes/refs/heads/main/kmes_logo.png" alt="Krause Musical Equipment Services Logo" class="brand-logo">
+            <img src="kmes_logo.png" alt="Krause Musical Equipment Services Logo" class="brand-logo">
             <div>
               <h1 class="shop-heading">Krause Musical Equipment Services</h1>
               <div class="hero-tagline">Tone Restored. Reliability Dialed In.</div>
@@ -404,9 +460,40 @@
           <div class="section-title">Contact &amp; Booking</div>
           <div class="cta-box">
             <h3>Ready to get your rig back on the bench?</h3>
-            <p>Tell us about your gear, the symptoms you're hearing, or the mod you have in mind.</p>
-            <a href="mailto:service@krauseequipment.com?subject=Bench%20Service%20Inquiry" class="cta-button">Book Bench Time</a>
-            <div class="cta-subtext">Monday &ndash; Friday, 10am &ndash; 6pm &bull; By Appointment Only</div>
+            <p class="cta-intro">Tell us about your gear, the symptoms you're hearing, or the mod you have in mind.</p>
+            
+            <form name="bench-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="inquiry-form">
+              <input type="hidden" name="form-name" value="bench-inquiry" />
+              <p class="hidden-field">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" required placeholder="e.g. Alex Miller" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" required placeholder="alex@example.com" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="gear">Gear Make &amp; Model</label>
+                <input type="text" id="gear" name="gear" required placeholder="e.g. 1974 Fender Princeton Reverb / Roland Juno-106" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Symptoms / Service Requested</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Describe what you're hearing, intermittent issues, or mods needed..."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="cta-button">Submit Bench Request</button>
+                <div class="cta-subtext">Monday &ndash; Friday, 10am &ndash; 6pm &bull; Drop-off By Appointment Only</div>
+              </div>
+            </form>
           </div>
         </section>
 
