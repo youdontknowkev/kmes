@@ -6,38 +6,53 @@
   <title>Krause Musical Equipment Services | Bench Services &amp; Vintage Audio Repair</title>
   <style>
     body {
-      background-color: #ffffff;
-      color: #000000;
+      background-color: #eeebe3;
+      color: #111111;
       font-family: Georgia, "Times New Roman", Times, serif;
       font-size: 17px;
       line-height: 1.6;
       margin: 0;
-      padding: 30px 20px 60px;
+      padding: 30px 16px 60px;
     }
 
     .container {
       max-width: 760px;
       margin: 0 auto;
+      background-color: #ffffff;
+      padding: 40px 48px;
+      border: 1px solid #d4d0c5;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     }
 
     header {
       margin-bottom: 24px;
     }
 
-    .logo-container {
-      margin-bottom: 16px;
+    .header-lockup {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
     }
 
-    .logo-container img {
-      height: 70px;
+    .header-lockup img {
+      height: 56px;
       width: auto;
       display: block;
+      flex-shrink: 0;
+    }
+
+    .shop-title {
+      font-size: 1.45rem;
+      font-weight: bold;
+      color: #000000;
+      line-height: 1.2;
     }
 
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       font-weight: bold;
-      margin: 0 0 10px 0;
+      margin: 0 0 12px 0;
       color: #000000;
     }
 
@@ -54,8 +69,19 @@
 
     hr {
       border: 0;
-      border-top: 1px solid #666666;
+      border-top: 1px solid #777777;
       margin: 24px 0;
+    }
+
+    .bench-image-wrap {
+      margin: 20px 0 24px 0;
+    }
+
+    .bench-photo {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #888888;
     }
 
     ul {
@@ -69,9 +95,9 @@
 
     .status-box {
       border: 2px solid #000000;
-      padding: 14px 18px;
+      padding: 16px 20px;
       margin: 24px 0;
-      background-color: #fafafa;
+      background-color: #f7f6f2;
     }
 
     .status-heading {
@@ -93,24 +119,35 @@
     footer {
       margin-top: 40px;
       padding-top: 16px;
-      border-top: 1px solid #cccccc;
+      border-top: 1px solid #d4d0c5;
       font-size: 0.9rem;
-      color: #555555;
+      color: #666666;
     }
 
     @media (max-width: 600px) {
       body {
         font-size: 16px;
-        padding: 20px 14px 40px;
+        padding: 12px 8px 30px;
+      }
+      .container {
+        padding: 24px 18px;
+      }
+      .header-lockup {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .header-lockup img {
+        height: 48px;
+      }
+      .shop-title {
+        font-size: 1.3rem;
       }
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
       }
       h2 {
         font-size: 1.2rem;
-      }
-      .logo-container img {
-        height: 55px;
       }
     }
   </style>
@@ -119,14 +156,19 @@
 
   <div class="container">
     <header>
-      <div class="logo-container">
-        <img src="kmes_logo.png" alt="Krause Musical Equipment Services Logo">
+      <div class="header-lockup">
+        <img src="kmes_logo.png" alt="KMES Logo">
+        <div class="shop-title">Krause Musical Equipment Services</div>
       </div>
       <h1>Bench Services &amp; Vintage Audio Repair</h1>
       <p>I repair, service, and restore vintage tube amplifiers, analog synthesizers, and discrete studio gear. All work is done to original schematic standards using proper engineering practices.</p>
     </header>
 
     <hr>
+
+    <div class="bench-image-wrap">
+      <img src="dr_build.jpg" alt="Point-to-point hand-wired tube amplifier on the bench" class="bench-photo">
+    </div>
 
     <section>
       <h2>Scope of Work</h2>
