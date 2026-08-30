@@ -19,13 +19,15 @@
       max-width: 760px;
       margin: 0 auto;
       background-color: #ffffff;
-      padding: 40px 48px;
       border: 1px solid #d4d0c5;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     }
 
-    header {
-      margin-bottom: 24px;
+    /* Edge-to-edge header banner */
+    .header-banner {
+      background-color: #f7e5cf; /* Bland pale orange */
+      border-bottom: 1px solid #dfc7af;
+      padding: 22px 24px;
     }
 
     .header-lockup {
@@ -33,10 +35,6 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
-      margin-bottom: 24px;
-      background-color: #f2efe9;
-      border: 1px solid #dcd8ce;
-      padding: 16px 20px;
       text-align: center;
     }
 
@@ -52,6 +50,15 @@
       font-weight: bold;
       color: #000000;
       line-height: 1.2;
+    }
+
+    /* Inner page content */
+    .content {
+      padding: 36px 48px 48px;
+    }
+
+    header {
+      margin-bottom: 24px;
     }
 
     h1 {
@@ -134,21 +141,23 @@
         font-size: 16px;
         padding: 12px 8px 30px;
       }
-      .container {
-        padding: 24px 18px;
+      .header-banner {
+        padding: 16px 14px;
       }
       .header-lockup {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 12px;
-        padding: 14px 16px;
       }
       .header-lockup img {
         height: 60px;
       }
       .shop-title {
         font-size: 1.45rem;
+      }
+      .content {
+        padding: 24px 18px 36px;
       }
       h1 {
         font-size: 1.45rem;
@@ -162,62 +171,69 @@
 <body>
 
   <div class="container">
-    <header>
+    <!-- Edge-to-edge header banner (logo + name only) -->
+    <div class="header-banner">
       <div class="header-lockup">
         <img src="kmes_logo.png" alt="KMES Logo">
         <div class="shop-title">Krause Musical Equipment Services</div>
       </div>
-      <h1>Bench Services &amp; Vintage Audio Repair</h1>
-      <p>I repair, service, and restore vintage tube amplifiers, analog synthesizers, and discrete studio gear. All work is done to original schematic standards using proper engineering practices.</p>
-    </header>
-
-    <hr>
-
-    <div class="bench-image-wrap">
-      <img src="dr_build.jpg" alt="Point-to-point hand-wired tube amplifier on the bench" class="bench-photo">
     </div>
 
-    <section>
-      <h2>Scope of Work</h2>
-      <ul>
-        <li><strong>Tube Amplifiers:</strong> Diagnostics, retubing and rebiasing, power supply recapping, 3-prong grounding, voicing, and custom mods (PPIMV, tone stacks). Servicing Fender, Marshall, Vox, Ampeg, Hiwatt, Sunn, Magnatone, and similar platforms.</li>
-        <li><strong>Synthesizers &amp; Keys:</strong> Power supply rebuilds, voice calibration, VCO/VCF tracking, contact overhauls, and recaps for Moog, ARP, Roland, Sequential Circuits, Oberheim, Rhodes, Wurlitzer, etc..</li>
-        <li><strong>Outboard &amp; Guitars:</strong> Discrete preamps, compressors, channel strips, and outboard gear. Guitar work is strictly limited to electronics: pickups, pots, switches, wiring, and shielding.</li>
-      </ul>
-    </section>
+    <!-- Main Content Column Area -->
+    <div class="content">
+      <header>
+        <h1>Bench Services &amp; Vintage Audio Repair</h1>
+        <p>I repair, service, and restore vintage tube amplifiers, analog synthesizers, and discrete studio gear. All work is done to original schematic standards using proper engineering practices.</p>
+      </header>
 
-    <hr>
+      <hr>
 
-    <section>
-      <h2>What I Do Not Service</h2>
-      <p>Modern surface-mount (SMD) gear, digital modeling units, modern solid-state amps, consumer AV receivers, or guitar woodwork/fretwork.</p>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Parts, Rates &amp; Turnaround</h2>
-      <ul>
-        <li><strong>Bench Fee:</strong> $100 non-refundable diagnostic deposit, applied toward total labor if approved.</li>
-        <li><strong>Labor:</strong> $100 per hour plus parts.</li>
-        <li><strong>Components:</strong> High-reliability modern components (F&amp;T, Nichicon, Sprague, CTS, Switchcraft) are installed by default. New Old Stock (NOS) components or vintage-correct cloth-covered wire can be used upon request; parts costs and lead times will reflect sourcing difficulty and market availability.</li>
-        <li><strong>Turnaround:</strong> Timelines depend strictly on current queue backlog and parts availability.</li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <section>
-      <div class="status-box">
-        <div class="status-heading">CURRENTLY ACCEPTING NEW WORK</div>
-        <p>Drop-offs are by appointment only.</p>
-        <p style="margin-bottom: 0;">Email <a href="mailto:kevin@krausemusic.com">kevin@krausemusic.com</a> with the make, model, and a specific description of the issue to schedule bench time.</p>
+      <div class="bench-image-wrap">
+        <img src="dr_build.jpg" alt="Point-to-point hand-wired tube amplifier on the bench" class="bench-photo">
       </div>
-    </section>
 
-    <footer>
-      <p>&copy; Krause Musical Equipment Services</p>
-    </footer>
+      <section>
+        <h2>Scope of Work</h2>
+        <ul>
+          <li><strong>Tube Amplifiers:</strong> Diagnostics, retubing and rebiasing, power supply recapping, 3-prong grounding, voicing, and custom mods (PPIMV, tone stacks). Servicing Fender, Marshall, Vox, Ampeg, Hiwatt, Sunn, Magnatone, and similar platforms.</li>
+          <li><strong>Synthesizers &amp; Keys:</strong> Power supply rebuilds, voice calibration, VCO/VCF tracking, contact overhauls, and recaps for Moog, ARP, Roland, Sequential Circuits, Oberheim, Rhodes, Wurlitzer, etc..</li>
+          <li><strong>Outboard &amp; Guitars:</strong> Discrete preamps, compressors, channel strips, and outboard gear. Guitar work is strictly limited to electronics: pickups, pots, switches, wiring, and shielding.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>What I Do Not Service</h2>
+        <p>Modern surface-mount (SMD) gear, digital modeling units, modern solid-state amps, consumer AV receivers, or guitar woodwork/fretwork.</p>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Parts, Rates &amp; Turnaround</h2>
+        <ul>
+          <li><strong>Bench Fee:</strong> $100 non-refundable diagnostic deposit, applied toward total labor if approved.</li>
+          <li><strong>Labor:</strong> $100 per hour plus parts.</li>
+          <li><strong>Components:</strong> High-reliability modern components (F&amp;T, Nichicon, Sprague, CTS, Switchcraft) are installed by default. New Old Stock (NOS) components or vintage-correct cloth-covered wire can be used upon request; parts costs and lead times will reflect sourcing difficulty and market availability.</li>
+          <li><strong>Turnaround:</strong> Timelines depend strictly on current queue backlog and parts availability.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section>
+        <div class="status-box">
+          <div class="status-heading">CURRENTLY ACCEPTING NEW WORK</div>
+          <p>Drop-offs are by appointment only.</p>
+          <p style="margin-bottom: 0;">Email <a href="mailto:kevin@krausemusic.com">kevin@krausemusic.com</a> with the make, model, and a specific description of the issue to schedule bench time.</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; Krause Musical Equipment Services</p>
+      </footer>
+    </div>
   </div>
 
 </body>
