@@ -14,4 +14,4 @@ Parts, Rates & Turnaround
 * Turnaround: Timelines depend strictly on current backlog and parts.
 CURRENTLY ACCEPTING NEW WORK
 Drop-offs are by appointment only.
-Email [kevin@krausemusic.com] with the make, model, and a specific description of the issue to schedule bench time.
+Email [kevin@krausemusic.com] with the make, model, and a specific description of the issue or project to schedule bench time.
